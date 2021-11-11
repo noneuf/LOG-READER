@@ -3,6 +3,7 @@ const delimiters = {
     '___________________________________________________________________________________________________',
   elementDelimiter: '|',
   imgPathDelimiter: ' נתיב לצילום מסך: ',
+  failElement: 'כשלון',
 };
 
 const input = document.querySelector('input[type="file"]');
@@ -24,13 +25,19 @@ input.addEventListener(
             const textnode = document.createTextNode(element);
             node.appendChild(textnode);
             document.getElementById('myList').appendChild(node);
+            // } else if (element.includes(delimiters.failElement)) {
+            //   const node = document.createElement('div');
+            //   node.className = 'fail';
+            //   const textnode = document.createTextNode(element);
+            //   node.appendChild(textnode);
+            //   document.getElementById('myList').appendChild(node);
+          } else {
+            const node = document.createElement('div');
+            node.className = 'element';
+            const textnode = document.createTextNode(element);
+            node.appendChild(textnode);
+            document.getElementById('myList').appendChild(node);
           }
-
-          const node = document.createElement('div');
-          node.className = 'element';
-          const textnode = document.createTextNode(element);
-          node.appendChild(textnode);
-          document.getElementById('myList').appendChild(node);
         });
       });
     };
