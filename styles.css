@@ -1,46 +1,11 @@
-/* #drop-area {
-    border: 2px dashed #ccc;
-    border-radius: 20px;
-    width: 480px;
-    font-family: sans-serif;
-    margin: 100px auto;
-    padding: 20px;
-  }
-  #drop-area.highlight {
-    border-color: purple;
-  }
-  p {
-    margin-top: 0;
-  }
-  .my-form {
-    margin-bottom: 10px;
-  }
-  #gallery {
-    margin-top: 10px;
-  }
-  #gallery img {
-    width: 150px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    vertical-align: middle;
-  }
-  .button {
-    display: inline-block;
-    padding: 10px;
-    background: #ccc;
-    cursor: pointer;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  .button:hover {
-    background: #ddd;
-  }
-  #fileElem {
-    display: none;
-  }
-   */
-.element {
-  background-color: aquamarine;
+.img:hover {
+  transform: scale(5);
+  margin-right: 200px;
+  transition: 0.5s;
+}
+
+.img {
+  height: 150px;
 }
 
 .button {
@@ -48,10 +13,6 @@
   width: 200px;
   height: 100px;
 }
-
-/* input[type='file'] {
-  display: none;
-} */
 
 input[type='file'] {
   font-size: 16px;
@@ -64,7 +25,7 @@ input[type='file'] {
 
 ::-webkit-file-upload-button {
   color: white;
-  background: #206a5d;
+  background: #402deb;
   padding: 20px;
   border: none;
   border-radius: 50px;
@@ -72,7 +33,15 @@ input[type='file'] {
   outline: none;
 }
 
+::-webkit-file-upload-button:hover {
+  background: #7a6ee7;
+}
+
 .fail {
   background-color: tomato;
   color: azure;
+}
+
+.success {
+  background-color: aquamarine;
 }
